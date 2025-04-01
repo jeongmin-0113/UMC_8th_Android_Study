@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:alpha="0.3"
+        android:src="@drawable/img_background"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrowback"
+        android:contentDescription="@string/go_back_button"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/transparent"/>
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:fontFamily="@font/handwritingfont"
+        android:textSize="30sp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/titleDescription1"/>
+
+    <TextView
+        android:id="@+id/titleDescription1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titleDescription1"
+        android:fontFamily="@font/handwritingfont"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title1"
+        app:layout_constraintBottom_toTopOf="@id/titleDescription2"/>
+
+    <TextView
+        android:id="@+id/titleDescription2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titleDescription2"
+        android:fontFamily="@font/bodyfont"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleDescription1"
+        app:layout_constraintBottom_toTopOf="@id/spaceBetweenTitleAndStamp"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/title_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="title1, titleDescription1, titleDescription2"/>
+
+    <Space
+        android:id="@+id/spaceBetweenTitleAndStamp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/title_group"
+        app:layout_constraintBottom_toTopOf="@id/img_yellowStamp"/>
+
+    <ImageView
+        android:id="@+id/img_yellowStamp"
+        android:layout_width="40dp"
+        android:layout_height="44.13dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_yellowstamp"
+        android:contentDescription="@string/mood_happy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spaceBetweenTitleAndStamp"
+        app:layout_constraintBottom_toTopOf="@id/stampDescription1"/>
+
+    <TextView
+        android:id="@+id/stampDescription1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mood_happy"
+        android:fontFamily="@font/handwritingfont"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_yellowStamp"
+        app:layout_constraintBottom_toTopOf="@id/img_blueStamp"/>
+
+    <ImageView
+        android:id="@+id/img_blueStamp"
+        android:layout_width="40dp"
+        android:layout_height="44.13dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_bluestamp"
+        android:contentDescription="@string/mood_excited"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stampDescription1"
+        app:layout_constraintBottom_toTopOf="@id/stampDescription2"/>
+
+    <TextView
+        android:id="@+id/stampDescription2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mood_excited"
+        android:fontFamily="@font/handwritingfont"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_blueStamp"
+        app:layout_constraintBottom_toTopOf="@id/img_purpleStamp"/>
+
+    <ImageView
+        android:id="@+id/img_purpleStamp"
+        android:layout_width="40dp"
+        android:layout_height="44.13dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_purplestamp"
+        android:contentDescription="@string/mood_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stampDescription2"
+        app:layout_constraintBottom_toTopOf="@id/stampDescription3"/>
+
+    <TextView
+        android:id="@+id/stampDescription3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mood_normal"
+        android:fontFamily="@font/handwritingfont"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_purpleStamp"
+        app:layout_constraintBottom_toTopOf="@id/img_greenStamp"/>
+
+    <ImageView
+        android:id="@+id/img_greenStamp"
+        android:layout_width="40dp"
+        android:layout_height="44.13dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_greenstamp"
+        android:contentDescription="@string/mood_nervous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stampDescription3"
+        app:layout_constraintBottom_toTopOf="@id/stampDescription4"/>
+
+    <TextView
+        android:id="@+id/stampDescription4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mood_nervous"
+        android:fontFamily="@font/handwritingfont"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_greenStamp"
+        app:layout_constraintBottom_toTopOf="@+id/img_redStamp"/>
+
+    <ImageView
+        android:id="@+id/img_redStamp"
+        android:layout_width="40dp"
+        android:layout_height="44.13dp"
+        android:contentDescription="@string/mood_angry"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_redstamp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stampDescription4"
+        app:layout_constraintBottom_toTopOf="@+id/stampDescription5"/>
+
+    <TextView
+        android:id="@+id/stampDescription5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mood_angry"
+        android:fontFamily="@font/handwritingfont"
+        android:textSize="18sp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_redStamp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
