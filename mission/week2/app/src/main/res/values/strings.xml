@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">week2_workbook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_title_name">투유</string>
+    <string name="text_fragment_edit">Edit Fragment</string>
+    <string name="date_sample">3월 25일</string>
+    <string name="message_sample">오늘의 일기 카드를 작성해주세요!</string>
+</resources>
