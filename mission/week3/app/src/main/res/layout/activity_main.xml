@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    tools:context=".ui.MainActivity">
 
     <FrameLayout
         android:id="@+id/main_frm"
@@ -14,6 +15,12 @@
         app:layout_constraintBottom_toTopOf="@id/main_player_cl"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toTopOf="@id/main_player_cl"
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_player_cl"
@@ -21,8 +28,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/main_bnv"
         android:paddingVertical="5dp"
-        android:background="@color/white"
-        android:elevation="-3dp"
+        android:background="@color/light_gray"
         >
 
         <LinearLayout
@@ -103,9 +109,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemIconSize="20dp"
+        android:background="@color/white"
         app:itemIconTint="@drawable/btm_color_selector"
         app:itemTextColor="@drawable/btm_color_selector"
         app:labelVisibilityMode="labeled"
+        app:itemRippleColor="@null"
+        app:itemActiveIndicatorStyle="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

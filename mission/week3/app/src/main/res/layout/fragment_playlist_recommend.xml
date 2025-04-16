@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.PlaylistRecommendFragment">
+    tools:context=".ui.home.PlaylistRecommendFragment">
 
     <ImageView
         android:id="@+id/home_panel_background_iv"
